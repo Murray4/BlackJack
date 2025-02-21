@@ -38,7 +38,6 @@ public class BlackJack {
             System.out.println("your throw: " + finalNumber);               // Prints your throw everytime loop runs
             if (finalNumber == 21) {
                 System.out.println("WUHUU you totally won!!");
-                System.exit(0);
                 return finalNumber;
 
             } else if (finalNumber > 21) {
