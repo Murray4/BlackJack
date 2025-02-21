@@ -12,7 +12,7 @@ public class BlackJack {
             int finalPlayerNumber = playerThrow(scanner);               // Takes return value from method and runs method
             int finalMachineNumber = machineThrow(finalPlayerNumber);                    // Takes return value from method and runs method
 
-            compareThrows(finalPlayerNumber, finalMachineNumber, scanner);// Runs compareThrows()
+            compareThrows(finalPlayerNumber, finalMachineNumber);// Runs compareThrows()
 
             System.out.println("\nDo you want to play again? (y/n)");
             String playAgain = scanner.nextLine();
@@ -38,13 +38,11 @@ public class BlackJack {
             System.out.println("your throw: " + finalNumber);               // Prints your throw everytime loop runs
             if (finalNumber == 21) {
                 System.out.println("WUHUU you totally won!!");
-                y = false;
                 System.exit(0);
                 return finalNumber;
 
             } else if (finalNumber > 21) {
                 System.out.println("Orgh too bad! You went over 21!!");
-                y = false;
                 return finalNumber;
             }
 
@@ -82,7 +80,7 @@ public class BlackJack {
         return finalNumber;
     }
 
-    public static void compareThrows(int finalPlayerNumber, int finalMachineNumber, Scanner scanner) {
+    public static void compareThrows(int finalPlayerNumber, int finalMachineNumber) {
         if (finalPlayerNumber != 21 && finalMachineNumber == 21) {
             System.out.println("Too bad! The Machine won! with a great roll: " + finalMachineNumber);
 
